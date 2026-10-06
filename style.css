@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #171717;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   MENÚ
+========================= */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(15, 15, 15, 0.95);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.logo {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   INICIO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+        linear-gradient(135deg, #222, #777);
+
+    display: flex;
+    align-items: center;
+    padding: 120px 10%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.small-title {
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    opacity: .8;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 8vw, 95px);
+    line-height: .95;
+    margin-bottom: 30px;
+}
+
+.hero p {
+    max-width: 600px;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+section {
+    scroll-margin-top: 75px;
+}
+
+.intro,
+.units,
+.content-section,
+.about {
+    padding: 110px 10%;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    font-size: 14px;
+    font-weight: bold;
+    opacity: .5;
+}
+
+.section-title h2 {
+    font-size: clamp(32px, 5vw, 55px);
+    line-height: 1;
+}
+
+.intro > p {
+    max-width: 850px;
+    font-size: 21px;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 45px;
+    min-height: 300px;
+    border: 1px solid #ddd;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,.1);
+}
+
+.card-number {
+    font-size: 14px;
+    opacity: .5;
+    margin-bottom: 35px;
+}
+
+.card h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.card a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.content-section {
+    background: #e9e9e9;
+}
+
+.content-section.dark {
+    background: #171717;
+    color: white;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 80px;
+}
+
+.content-text h3,
+.work-box h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.content-text p {
+    max-width: 700px;
+    font-size: 18px;
+}
+
+.work-box {
+    border-left: 2px solid currentColor;
+    padding-left: 30px;
+}
+
+.work-link {
+    display: block;
+    padding: 15px 0;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(128,128,128,.3);
+    transition: .3s;
+}
+
+.work-link:hover {
+    padding-left: 10px;
+}
+
+
+/* =========================
+   ACERCA DE
+========================= */
+
+.about {
+    background: #111;
+    color: white;
+}
+
+.about-content {
+    max-width: 900px;
+}
+
+.about h2 {
+    font-size: clamp(40px, 7vw, 80px);
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.student {
+    margin-top: 50px;
+    border-top: 1px solid #444;
+    padding-top: 30px;
+}
+
+.student p {
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 13px;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #111;
+
+        flex-direction: column;
+        gap: 0;
+
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        border-bottom: 1px solid #333;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 18px 25px;
+    }
+
+    .hero {
+        padding: 120px 25px 80px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .intro,
+    .units,
+    .content-section,
+    .about {
+        padding: 80px 25px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .card {
+        padding: 30px;
+    }
+
+}
