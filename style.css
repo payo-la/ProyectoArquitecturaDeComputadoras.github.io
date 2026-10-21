@@ -958,3 +958,30 @@ footer p {
     opacity: 1;
     transform: translateY(0);
 }
+/* =========================
+   ENLACES A DOCUMENTOS PDF
+========================= */
+
+a.evidence-card {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.evidence-card:focus-visible {
+    outline: 3px solid #00d4ff;
+    outline-offset: 4px;
+}
+
+.evidence-card .evidence-arrow {
+    transition: 0.3s ease;
+}
+
+.evidence-card:hover .evidence-arrow {
+    color: #009bc0;
+    transform: translate(3px, -3px);
+}
+
+.evidence-card h3 {
+    overflow-wrap: anywhere;
+}
